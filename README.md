@@ -1,4 +1,4 @@
-# Quadra CKMS Accelerator
+# Quadra Conversation Knowledge Mining Solution Accelerator
 
 MENU: [**USER STORY**](#user-story) \| [**ONE-CLICK DEPLOY**](#one-click-deploy)  \| [**SUPPORTING DOCUMENTS**](#supporting-documents) \|
 [**CUSTOMER TRUTH**](#customer-truth)
@@ -56,7 +56,7 @@ These requirements must be met before the solution accelerator is installed.
 
     -   Tokens per Minute: 22K
 
-### Products used/licenses required
+### Products used/licenses required:
 
 -   Azure Cognitive Search
 

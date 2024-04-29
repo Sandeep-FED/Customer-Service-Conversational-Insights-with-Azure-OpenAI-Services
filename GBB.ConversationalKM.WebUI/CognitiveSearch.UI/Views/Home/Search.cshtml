@@ -89,15 +89,18 @@
 
         <div style="margin:0 10px 10px 10px;">
         <div id="results-title"><h4 class="overview-title">Performance Overview</h4><div id="disclaimer">AI-generated content may be incorrect</div></div>
-            <div class="card-body" style="display:flex;justify-content:space-between">
-                <div>
-
+            <div class="card-body" style="display:flex;">
+                <div style="width:50%">
                     <h5 class="date-control" style="display: inline-block" style="padding-right:15px;font-size:14px;">Start Date</h5>
                     <input type="date" class="form-control-date advancedAutoComplete" name="startdate" id="startdate" placeholder="Start Date" autocomplete="off">
                     <h5 class="date-control" style="display: inline-block;margin-left: 1rem;" style="padding-right:15px;">End Date</h5>
                     <input type="date" class="form-control-date advancedAutoComplete" name="enddate" id="enddate" placeholder="End Date" autocomplete="off">
                 </div>
-                <div>
+                <div class="width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;">
 
                     <a asp-action="UploadData" asp-controller="Admin" class="fluent-button upload-button"> Upload file</a>
                     @* <button style="font-weight: 600; border: 1px solid lightgrey; background: white; color: black; margin-right: 10px" class="fluent-button" onclick="EntityMapClick()">View entity Map</button> *@

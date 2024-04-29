@@ -13,7 +13,7 @@
                 </p>
                 <form asp-controller="Admin" asp-action="CustomizeNavBar" asp-antiforgery="false"
                       id="CustomizeNavBar" enctype="multipart/form-data" method="post">
-                    <div class="fallback">
+                    <div class="fallback" style="display:flex;flex-direction:column">
                         <label>Select a background color</label>
                         <input name="navbar-bg" type="color" value="@Model.NavBar.BackgroundColor" />
                         <br />
@@ -30,7 +30,7 @@
                     }
                 </div>
                     <br />
-                    <input type="submit" value="Save NavBar Settings" class="btn btn-primary" />
+                <button type="submit" value="Save NavBar Settings" class="fluent-button" />
                 </form>
             </div>
         </div>

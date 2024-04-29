@@ -36,7 +36,7 @@ can inform data driven actions to drive decisions around staffing and operations
 
 **Below is an image of the solution accelerator.**\
 \
-![image](/images/readMe/image2.png)
+![image](/images/readMe/Solution_Image1.png)
 
 <h2><img src="/images/readMe/oneClickDeploy.png" width="64">
 <br/>

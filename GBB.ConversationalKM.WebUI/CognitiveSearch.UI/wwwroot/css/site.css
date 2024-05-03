@@ -73,7 +73,7 @@ audio {
     padding-right: 0px !important;
 }
 .body-container {
-    background: #f4f4f4;
+    background: #EDF1FA;
 }
 
 .recentsearch {
@@ -448,7 +448,7 @@ h3{
 }
 
 .navbar-bg {
-    background-color: #092C47;
+    background-color: #fff;
 }
 
 .navbar-text {
@@ -913,7 +913,7 @@ body {
 }
 
 .panel-scroll {
-    height: 250px;
+    height: auto;
     overflow-y: auto;
 }
 
@@ -1203,7 +1203,7 @@ body {
     font-weight: 500px;
 }
 .panel-bg {
-    background: #092c47;
+    background: #ffffff;
     border-top-right-radius: 8px;
 }
 
@@ -1220,14 +1220,14 @@ body {
     border: none;
 }
 .accordion-button {
-    background-color: #092c47;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     font-weight: inherit;
     height: 44px;
 }
 
 .accordion-header {
-    border-bottom: 1px solid rgb(255 255 255 / 22%);
+    border-bottom: 1px solid rgb(176 176 176 / 22%);
     margin-left: 0.4rem;
 }
 
@@ -1241,14 +1241,14 @@ div.accordion {
     --bs-accordion-border-color: #f4f4f4;
 }
 
-    .accordion-button.collapsed::after {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    }
+.accordion-button.collapsed::after {
+    background-image: var(--bs-accordion-btn-active-icon);
+}
 .accordion-body panel-scroll{
     color:#fff;
 }
 .ms-Label {
-    color: #fff;
+    color: #000;
     font-family: 'Raleway',sans-serif !important;
 }
 .ms-CheckBox-field:focus .ms-Label, .ms-CheckBox-field:hover .ms-Label {
@@ -1264,6 +1264,26 @@ div.accordion {
     border-color: #ffffff;
     box-shadow: none;
 }
+.overview-title {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+.card-header {
+    background: linear-gradient(to right, #9c20aa, #fb3570);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.column-header {
+    font-family: "Raleway", sans-serif !important;
+    font-weight:600;
+}
+fluent-data-grid-cell {
+    font-family: "Raleway", sans-serif !important;
+}
+.insight-value {
+    font-weight: bold;
+}
 @media (width<= 1272px) {
     .accordion-button {
         font-size: 14px;
@@ -1278,20 +1298,20 @@ div.accordion {
         font-size: 18px;
         font-weight: 600;
         color: #000;
-        background: linear-gradient(to right, #9c20aa, #fb3570);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
     }
-    .overview-title {
-        font-size: 20px;
-        margin: 0;
-        font-weight: bold;
-    }
+    
     .insight-value {
         font-size: 18px;
-        font-weight: bold;
     }
     .date-control{
         font-size:14px;
+    }
+}
+@media (width>1300px){
+    .fluent-button {
+        padding:6px 15px;
+    }
+    .date-control{
+        font-size:16px;
     }
 }

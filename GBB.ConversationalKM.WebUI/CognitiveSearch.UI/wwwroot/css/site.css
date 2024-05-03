@@ -386,6 +386,7 @@ h3{
 
 .ms-Pivot-content {
     /*margin-top: 0px;*/
+    font-family: "Raleway", sans-serif !important;
     height: calc(100% - 60px) !important;
 }
 

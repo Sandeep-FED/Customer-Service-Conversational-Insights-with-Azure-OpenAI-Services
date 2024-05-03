@@ -1036,6 +1036,7 @@ body {
 }
 
 .fluent-card-custom {
+    width:50%;
     border-radius: 8px;
     background: linear-gradient(#fff 0 0) padding-box, /*this is your grey background*/
     linear-gradient(to right, #9c20aa, #fb3570) border-box;
@@ -1076,10 +1077,10 @@ body {
 }
 
 .stats-rect {
-    --card-width: 500px;
+    --card-width: 475px;
     --card-height: 200px;
     margin: 0px;
-    padding: 20px;
+    padding: 15px;
     position: relative;
     border-radius: 0;
     box-shadow: none;
@@ -1131,7 +1132,7 @@ body {
     width: 50%;
     margin: 0px;
     display: block;
-    padding: 20px;
+    padding: 15px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -1146,10 +1147,10 @@ body {
     --card-height: 100px;
     width: 50%;
     margin: 0px;
-    display: block;
-    padding: 20px;
+    display: flex;
+    padding: 15px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     border-radius: calc(var(--layer-corner-radius) * 1px);
     background-image: none;

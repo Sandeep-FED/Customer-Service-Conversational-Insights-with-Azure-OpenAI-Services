@@ -1308,6 +1308,9 @@ fluent-data-grid-cell {
     .date-control{
         font-size:14px;
     }
+    .top-discussed-city{
+        width:46px;
+    }
 }
 @media (width>1300px){
     .fluent-button {

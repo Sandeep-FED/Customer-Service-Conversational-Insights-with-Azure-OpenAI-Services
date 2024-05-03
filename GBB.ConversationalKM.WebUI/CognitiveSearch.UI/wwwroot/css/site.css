@@ -1043,6 +1043,7 @@ body {
     border: 1.4px solid transparent;
 }
 .fluent-card-custom-top-cities {
+    width:50%;
     border-radius: 8px;
     background: linear-gradient(#fff 0 0) padding-box, /*this is your grey background*/
     linear-gradient(to right, #24538D, #23CAFF) border-box;

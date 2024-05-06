@@ -4,14 +4,18 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CognitiveSearch.UI.Configuration;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.UI;
 
 namespace CognitiveSearch.UI
 {
@@ -33,6 +37,12 @@ namespace CognitiveSearch.UI
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddMicrosoftIdentityWebAppAuthentication(Configuration);
+            services.AddMvc(option =>
+            {
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                option.Filters.Add(new AuthorizeFilter(policy));
+            }).AddMicrosoftIdentityUI();
 
             var apiConfig = new ApiConfig
             {
@@ -75,6 +85,8 @@ namespace CognitiveSearch.UI
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
             app.UseCookiePolicy();
             app.UseMvcWithDefaultRoute();
         }

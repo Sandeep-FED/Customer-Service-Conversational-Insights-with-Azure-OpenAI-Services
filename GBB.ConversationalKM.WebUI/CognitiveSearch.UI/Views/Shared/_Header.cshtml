@@ -1,14 +1,20 @@
 @using CognitiveSearch.UI.Configuration
+ @using System.Security.Principal
 @inject AppConfig AppConfig
 
 @{
+
+  
+
+
     // Check if the current view is Search
     String action = ViewContext.RouteData.Values["action"].ToString();
     bool isSearchView = action == "Index";
 }
 
 <!--link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" /-->
-<nav class="navbar navbar-expand-lg navbar navbar-bg">
+<nav class="navbar navbar-expand-lg navbar navbar-bg position-sticky top-0" style="z-index:9;background: rgba(255, 255, 255, 52%);
+    backdrop-filter: blur(10px);">
     <div class="container-fluid">
         <div class="content">
             <div class="navbar-header">
@@ -26,8 +32,36 @@
                     }
                 </div>
             }
+            <div class="navbar-nav flex align-items-center gap-1">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                         style="background: #dddddd;
+    color: #000;
+    border-radius: 49px;
+    font-size: 12px;">
+                          <img src="~/images/user.png" style="width: 28px;
+                         height: 28px;" />
+                        @User.Identity.Name
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="        margin-top: 6rem;
+        padding: 2px;
+        font-size: 14px;">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Sign out</a>
+                        </li>
+                    </div>
+                   
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Sign in</a>
+                    </li>
+                }
+            </div>
         </div>
-
+       
     </div>
 </nav>
 

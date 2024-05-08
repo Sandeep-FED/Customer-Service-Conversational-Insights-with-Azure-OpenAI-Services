@@ -13,7 +13,7 @@
 <main role="main">
 
     <fluent-card class="uploadcard">
-        <img class="img-upload" src ="/../../images/arrow-upload.png" alt="arrow upload" />
+        <img class="img-upload" src="/../../images/arrow-upload.png" alt="arrow upload" />
         <h1 style="text-align: center;">Upload your audio or json files for analysis</h1>
         <div class="card-body">
             <h3 style="text-align: center; font-weight: 400">
@@ -28,11 +28,11 @@
             </div>
 
         </div>
-        @if(!String.IsNullOrEmpty(Model.UploadDisclaimer))
+        @if (!String.IsNullOrEmpty(Model.UploadDisclaimer))
         {
-        <div style="text-align: center; font-size: 11pt; color: #797775;">@Model.UploadDisclaimer</div>
+            <div style="text-align: center; font-size: 11pt; color: #797775;">@Model.UploadDisclaimer</div>
         }
-        
+
     </fluent-card>
 </main>
 

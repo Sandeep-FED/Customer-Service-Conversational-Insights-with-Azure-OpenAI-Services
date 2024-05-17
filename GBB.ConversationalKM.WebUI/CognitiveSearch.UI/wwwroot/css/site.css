@@ -612,8 +612,6 @@ pre {
 }
 
 
-}
-
 .search-result a {
     margin-top: 10px;
 }
@@ -627,6 +625,7 @@ pre {
 .result-item {
     display: flex;
     align-items: start;
+    width: 100%;
 }
 
 .result-item img {
@@ -651,7 +650,6 @@ pre {
     font-size: 14px;
     color: #717171;
     margin-top: 3px;
-    margin-left: 15px;
     text-wrap: nowrap;
 }
 

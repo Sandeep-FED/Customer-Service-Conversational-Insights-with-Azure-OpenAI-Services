@@ -339,16 +339,19 @@ function UpdateResults(data, answer) {
                             ${ resultContent}`
 
             if (pathLower.includes(".mp3") || pathLower.includes(".json") || pathLower.includes(".m4a")) {
+                console.log()
                 previewAllContent = `
                     
                 <div class="result-item-with-date">
                     <div class="result-item">
                         <img src="images/0394-ai-lightbulb-l-standard-96x96.png"/>
                         <div class="result-item-text">
-                            <h5>Call summary</h5>
+                            <h5><b>File Name</b></h5>
+                            <div>${document.metadata_storage_name.split(".")[0]}</div>
+                            <h5 style="margin-top:1rem;">Call summary</h5>
                             <div>${document.summary}</div>
                         </div>
-                        <div class="result-date">${moment(document.StartTime).format("LL<br>LT")}</div>
+                        <div class="result-date" style='margin-left:auto;'>${moment(document.StartTime).format("LL<br>LT")}</div>
                     </div>
                 </div>
 
